@@ -1,7 +1,7 @@
 <template>
   <div class="base-app">
     <el-container>
-      <el-aside width="auto">
+      <el-aside width="auto" class="fixed">
         <navigation-component/>
       </el-aside>
       <el-main>
@@ -27,5 +27,8 @@ export default {
   font-family: Roboto, Arial, sans-serif;
   color: #f1f1f1;
   height: 100vw;
+}
+.fixed{
+  max-height: 99vw;
 }
 </style>
