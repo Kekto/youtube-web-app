@@ -1,13 +1,18 @@
 <template>
   <div class="base-app">
-    <el-container>
-      <el-aside width="auto" class="fixed">
-        <navigation-component/>
-      </el-aside>
-      <el-main>
-        <router-view/>
-      </el-main>
-    </el-container>
+    <el-contained>
+      <el-header height="40px">Header</el-header>
+        <el-container>
+        <el-aside width="auto">
+          <navigation-component/>
+        </el-aside>
+        <el-main>
+          <router-view/>
+          Main
+        </el-main>
+      </el-container>
+    </el-contained>
+
   </div>
 </template>
 
@@ -26,9 +31,7 @@ export default {
   background-color: #0f0f0f;
   font-family: Roboto, Arial, sans-serif;
   color: #f1f1f1;
-  height: 100vw;
+  height: 99.3vw;
 }
-.fixed{
-  max-height: 99vw;
-}
+
 </style>
