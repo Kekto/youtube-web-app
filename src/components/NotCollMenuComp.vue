@@ -1,13 +1,9 @@
 <template>
 <el-menu
-    default-active="0"
-    class="el-menu-vertical-demo"
-    :collapse="isCollapse"
-    @open="handleOpen"
-    @close="handleClose"
+    default-active="1"
   >
-  <div style="width: 210px;">
-  <el-menu-item index="1">
+  <div style="width: 210px; margin-top: 7px; position: fixed;" class="el-menu-vertical-demo">
+    <el-menu-item index="1">
         <div class="min-image">
             <el-icon size="22px"><HomeFilled /></el-icon>
         </div>
@@ -279,15 +275,29 @@ export default {
     }
     .el-menu-vertical-demo{
         margin-left: 8px;
-    }
 
+    }
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         background-color: #0f0f0f;
         border: none;
         width: 220px;
         overflow-x: hidden;
-        height: 100%;
+        max-height: 90vh;
+        padding-bottom: 6vh;
         overflow-y: auto;
+    }
+    .el-menu-vertical-demo::-webkit-scrollbar{
+        background-color:#0f0f0f;
+        width: 0.4em;
+    }
+    .el-menu-vertical-demo:not(:hover){
+        overflow-y: hidden;
+    }
+    .el-menu-vertical-demo::-webkit-scrollbar-thumb{
+        border-color: #0f0f0f;
+        border-width: 10px;
+        background-color:#5f5f5f;
+        border-radius: 10px;
     }
     .el-menu-item{
         color: #f1f1f1;

@@ -1,6 +1,7 @@
 <template>
  <!-- COLLAPSED -->
- <div class="flex justify-center items-center flex-col ml-2 w-16 ">
+ <div class="flex justify-center items-center flex-col w-16">
+    <div style="position: fixed;" class="ml-2">
         <div class="icon-container">
             <div class="flex justify-center items-center flex-col h-fit" >
                 <el-icon size="22px"><HomeFilled /></el-icon>
@@ -32,6 +33,8 @@
             </div>
         </div>
     </div>
+ </div>
+
 </template>
 
 <script>
