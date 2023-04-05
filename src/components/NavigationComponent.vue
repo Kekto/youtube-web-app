@@ -34,10 +34,15 @@ export default {
 <style scoped>
     .collapsed{
         margin-left: 8px;
+        height: 95.4vh;
+        justify-content: start;
+
     }
     .not-collapsed{
         margin-left: 8px;
         margin-top: 7px;
         width: 210px;
+
+        background-color: #0f0f0f;
     }
 </style>
