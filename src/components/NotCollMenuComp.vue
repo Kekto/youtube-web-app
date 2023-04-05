@@ -2,7 +2,7 @@
 <el-menu
     default-active="1"
   >
-  <div style="width: 210px; margin-top: 7px; position: fixed;" class="el-menu-vertical-demo">
+  <div style="width: 210px;" class="el-menu-vertical-demo">
     <el-menu-item index="1">
         <div class="min-image">
             <el-icon size="22px"><HomeFilled /></el-icon>
@@ -27,7 +27,6 @@
             <div class="title wrap-hide-text"> Subscriptions</div>
         </template>
     </el-menu-item>
-
     <!-- DIVIDER -->
     <el-divider class="divider"/>
     <el-menu-item index="4">
@@ -270,25 +269,18 @@ export default {
 </script>
 
 <style scoped>
-.hovered:hover{
-        background-color: #1f1f1f;
-    }
-    .el-menu-vertical-demo{
-        margin-left: 8px;
 
-    }
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         background-color: #0f0f0f;
         border: none;
         width: 220px;
         overflow-x: hidden;
-        max-height: 90vh;
-        padding-bottom: 6vh;
-        overflow-y: auto;
+        max-height: 94.6vh;
     }
     .el-menu-vertical-demo::-webkit-scrollbar{
         background-color:#0f0f0f;
         width: 0.4em;
+        margin-left: 8px;
     }
     .el-menu-vertical-demo:not(:hover){
         overflow-y: hidden;
@@ -321,9 +313,8 @@ export default {
         filter:invert();
     }
     .divider{
-        margin-top: 5px;
-        margin-bottom: 5px;
         opacity: 30%;
+        @apply m-3
     }
     .blue-dot{
         background-color: rgb(27, 152, 255);

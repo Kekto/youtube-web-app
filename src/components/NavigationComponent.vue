@@ -33,13 +33,11 @@ export default {
   
 <style scoped>
     .collapsed{
-        position: sticky;
-        margin-top: 155px;
-        margin-left: 4px;
-
+        margin-left: 8px;
     }
     .not-collapsed{
-        position: sticky;
+        margin-left: 8px;
+        margin-top: 7px;
         width: 210px;
     }
 </style>

@@ -16,7 +16,6 @@
         </el-main>
       </el-container>
     </el-container>
-
   </div>
 </template>
 
@@ -45,11 +44,14 @@ export default {
 </script>
 
 <style scoped>
+#app{
+  background-color: #0f0f0f;
+}
 .base-app{
   background-color: #0f0f0f;
   font-family: Roboto, Arial, sans-serif;
   color: #f1f1f1;
-  height: 99.3vw;
+  max-height: 99.3vw;
 
 }
 .base-app::-webkit-scrollbar {
@@ -59,7 +61,6 @@ export default {
 .header{
   height: 44px;
   background-color: #0f0f0f;
-  width: 100%;
 }
 .main{
   position: sticky;

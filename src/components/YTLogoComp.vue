@@ -1,6 +1,6 @@
 <template>
     <div class="yt-logo">
-        <div class="fixed flex flex-row hover:cursor-pointer">
+        <div class="flex flex-row hover:cursor-pointer">
             <div class=" mt-2 w-10 h-10 flex items-center justify-center select-none hover:cursor-pointer hovered rounded-full" @click="this.toggleMenu()">
                 <el-icon size="24px" class="h-10" v-if="this.getToggleMenuVal ==true"><Expand /></el-icon>
                 <el-icon size="24px" class="h-10" v-else><Fold /></el-icon>
@@ -54,6 +54,5 @@ export default {
         background-color:#0f0f0f;
         height: 48px;
         width: 218px;
-        z-index: 2;
     }
 </style>
