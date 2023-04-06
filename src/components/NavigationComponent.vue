@@ -34,7 +34,7 @@ export default {
 <style scoped>
     .collapsed{
         margin-left: 8px;
-        height: 95.4vh;
+        height: 93.4vh;
         justify-content: start;
 
     }

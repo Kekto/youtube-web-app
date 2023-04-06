@@ -17,7 +17,7 @@
         <DiscoverMenuComp/>
     <!-- DIVIDER -->
     <el-divider class="divider"/>
-    More with youtube
+        <MoreYTComp/>
     <!-- DIVIDER -->
     <el-divider class="divider"/>
     SETTINGS
@@ -35,11 +35,12 @@ import DefaultMenuComp from './menuComps/DefaultMenuComp.vue'
 import PersonalMenuComp from './menuComps/PersonalMenuComp.vue'
 import SubsMenuComp from './menuComps/SubsMenuComp.vue';
 import DiscoverMenuComp from './menuComps/DiscoverMenuComp.vue';
+import MoreYTComp from './menuComps/MoreYTComp.vue'
 
 export default {
     name: 'NotCollMenuComp',
     components: { 
-        SubsMenuComp, PersonalMenuComp, DefaultMenuComp, DiscoverMenuComp
+        SubsMenuComp, PersonalMenuComp, DefaultMenuComp, DiscoverMenuComp, MoreYTComp
     },
     data() {
         return {
@@ -58,7 +59,7 @@ export default {
         border: none;
         width: 220px;
         overflow-x: hidden;
-        max-height: 94.6vh;
+        max-height: 93vh;
     }
     .el-menu-vertical-demo::-webkit-scrollbar{
         background-color:#0f0f0f;

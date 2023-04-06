@@ -5,7 +5,7 @@
                 <el-icon size="24px" class="h-10" v-if="this.getToggleMenuVal ==true"><Expand /></el-icon>
                 <el-icon size="24px" class="h-10" v-else><Fold /></el-icon>
             </div>
-            <div class="m-2 ml-0 h-10 flex items-center">
+            <div class="m-2 ml-5 h-10 flex items-center">
                 <img class="h-5" src="../assets/yt_logo_icon.png"/>
                 <img class="ml-1 h-5 filter-brightness" src="../assets/yt_logo_text.png"/>
             </div>

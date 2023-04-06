@@ -51,8 +51,7 @@ export default {
   background-color: #0f0f0f;
   font-family: Roboto, Arial, sans-serif;
   color: #f1f1f1;
-  max-height: 99.3vw;
-
+  height: 100%;
 }
 .base-app::-webkit-scrollbar {
     display: none;
@@ -61,6 +60,7 @@ export default {
 .header{
   height: 44px;
   background-color: #0f0f0f;
+  @apply mb-4
 }
 .main{
   position: sticky;
