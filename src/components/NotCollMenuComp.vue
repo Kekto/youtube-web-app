@@ -14,7 +14,16 @@
         <SubsMenuComp/>
     <!-- DIVIDER -->
     <el-divider class="divider"/>
-    DISCOVER
+        <DiscoverMenuComp/>
+    <!-- DIVIDER -->
+    <el-divider class="divider"/>
+    More with youtube
+    <!-- DIVIDER -->
+    <el-divider class="divider"/>
+    SETTINGS
+    <!-- DIVIDER -->
+    <el-divider class="divider"/>
+    INFO
 </div>
 </el-menu>
 
@@ -25,10 +34,12 @@
 import DefaultMenuComp from './menuComps/DefaultMenuComp.vue'
 import PersonalMenuComp from './menuComps/PersonalMenuComp.vue'
 import SubsMenuComp from './menuComps/SubsMenuComp.vue';
+import DiscoverMenuComp from './menuComps/DiscoverMenuComp.vue';
+
 export default {
     name: 'NotCollMenuComp',
     components: { 
-        SubsMenuComp, PersonalMenuComp, DefaultMenuComp
+        SubsMenuComp, PersonalMenuComp, DefaultMenuComp, DiscoverMenuComp
     },
     data() {
         return {
@@ -52,7 +63,6 @@ export default {
     .el-menu-vertical-demo::-webkit-scrollbar{
         background-color:#0f0f0f;
         width: 0.4em;
-        margin-left: 8px;
     }
     .el-menu-vertical-demo:not(:hover){
         overflow-y: hidden;
@@ -65,6 +75,6 @@ export default {
     }
     .divider{
         opacity: 30%;
-        @apply m-3
+        @apply m-2 right-2
     }
 </style>

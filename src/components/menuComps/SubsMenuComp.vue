@@ -1,6 +1,8 @@
 <template>
 <div class="ml-4 mt-4 m-2">
+    <div class="ml-2">
         Subscriptions
+    </div>
     </div>
     <div class="el-menu-item">
         <div class="min-image">
