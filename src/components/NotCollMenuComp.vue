@@ -20,10 +20,10 @@
         <MoreYTComp/>
     <!-- DIVIDER -->
     <el-divider class="divider"/>
-    SETTINGS
+        <SettingsMenuComp/>
     <!-- DIVIDER -->
     <el-divider class="divider"/>
-    INFO
+        <HyperlinksMenuComp/>
 </div>
 </el-menu>
 
@@ -36,11 +36,13 @@ import PersonalMenuComp from './menuComps/PersonalMenuComp.vue'
 import SubsMenuComp from './menuComps/SubsMenuComp.vue';
 import DiscoverMenuComp from './menuComps/DiscoverMenuComp.vue';
 import MoreYTComp from './menuComps/MoreYTComp.vue'
+import SettingsMenuComp from './menuComps/SettingsMenuComp.vue';
+import HyperlinksMenuComp from './menuComps/HyperlinksMenuComp.vue'
 
 export default {
     name: 'NotCollMenuComp',
     components: { 
-        SubsMenuComp, PersonalMenuComp, DefaultMenuComp, DiscoverMenuComp, MoreYTComp
+        SubsMenuComp, PersonalMenuComp, DefaultMenuComp, DiscoverMenuComp, MoreYTComp, SettingsMenuComp, HyperlinksMenuComp
     },
     data() {
         return {
@@ -53,7 +55,6 @@ export default {
 </script>
 
 <style scoped>
-
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         background-color: #0f0f0f;
         border: none;
