@@ -34,14 +34,14 @@ export default {
 <style scoped>
     .collapsed{
         margin-left: 8px;
-        height: 93.4vh;
+        height: 94vh;
         justify-content: start;
-
     }
     .not-collapsed{
         margin-left: 8px;
         margin-top: 7px;
-        width: 210px;
+        width: 220px;
+        padding-right: 10px;
 
         background-color: #0f0f0f;
     }
