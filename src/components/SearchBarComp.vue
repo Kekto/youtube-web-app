@@ -9,7 +9,7 @@
             <el-icon size="20px" style="opacity:50%"><Search/></el-icon>
         </el-button>
         <el-button class="button-round">
-            <el-icon size="20px" style="opacity:50%"><Search/></el-icon>
+            <img class="button-icon" :src="require(`@/assets/yt_mic_icon.svg`)"/>
         </el-button>
     </div>
   </template>
@@ -30,12 +30,15 @@ export default {
 
 <style scoped>
 .search-bar{
+    display: flex;    
+    width: auto;
     position: relative;
-    top: 10px;
+    top: 5px;
     height: 40px;
+    flex-wrap: nowrap;
 }
 .el-input{
-    width: 350px;
+    width: 35vw;
     height: inherit;
     font-size: 16px;
     --el-input-background-color: #0f0f0f ;
@@ -56,14 +59,20 @@ export default {
     border-color: #1f1f1f;
     border-radius: 0px 25px 25px 0px;
     color: white;
+    --el-button-hover-bg-color: #1f1f1f ;
 }
 .button-round{
-    height: inherit;
-    width: 40px;
+    height:40px;
+    width:40px;
+    padding:0;
     background-color: #1f1f1f ;
     border-color: #1f1f1f;
     border-radius: 50%;
     color: white;
+    --el-button-hover-bg-color: #1f1f1f ;
+}
+.button-icon{
+    height: 16px;
 }
 
 .button:hover{

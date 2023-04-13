@@ -10,7 +10,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -21,7 +21,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User with a name too long to fit</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User #4asdasdasd</div>
-            <div v-if="true" class="right ml-3 m-2">
+            <div v-if="false" class="right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="false" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -65,7 +65,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -103,7 +103,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="title">
             <div class="wrap-hide-text">Random User</div>
-            <div class="relative right ml-3 m-2">
+            <div v-if="true" class="relative right ml-3 m-2">
                 <div class="blue-dot"></div>
             </div>
         </div>
