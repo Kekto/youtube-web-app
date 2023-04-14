@@ -2,7 +2,7 @@
 <el-menu
     default-active="1"
   >
-  <div style="width: 220px; padding-right: 10px;" class="el-menu-vertical-demo">
+  <div style="width: 215px;" class="el-menu-vertical-demo">
     <!-- DEFAULT MENU -->
         <DefaultMenuComp/>
     <!-- DIVIDER -->
@@ -55,12 +55,16 @@ export default {
 </script>
 
 <style scoped>
+.el-menu{
+    border-right: none;
+}
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         background-color: #0f0f0f;
         border: none;
         width: 210px;
         overflow-x: hidden;
         max-height: 93vh;
+
     }
     .el-menu-vertical-demo::-webkit-scrollbar{
         background-color:#0f0f0f;

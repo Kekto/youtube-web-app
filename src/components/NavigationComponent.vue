@@ -36,6 +36,7 @@ export default {
         margin-left: 8px;
         height: 94vh;
         justify-content: start;
+        overflow-y: hidden;
     }
     .not-collapsed{
         margin-left: 8px;

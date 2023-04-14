@@ -13,7 +13,6 @@
         <el-main class="main">
           <div style="position: sticky;">
             <router-view/>
-            MAIN
           </div>
         </el-main>
       </el-container>
@@ -58,6 +57,7 @@ export default {
   color: #f1f1f1;
   height: 100%;
   overflow-y: hidden;
+
 }
 .base-app::-webkit-scrollbar {
     display: none;
@@ -73,6 +73,11 @@ export default {
 }
 .main{
   position: sticky;
+  padding: 0;
+  padding-top: 12px;
+}
+.main::-webkit-scrollbar{
+  display: none;
 }
 
 </style>
