@@ -1,19 +1,13 @@
 <template>
     <div class="card">
         <div class="card-image">
-            <div class="timer">
-                00:00
-            </div>
         </div>
         <div class="row">
             <div class="details">
-                <div class="profile-picture">
-                </div>
                 <div>
-                    <div class="title">Title waaaaaay to long to fit in two lines that were given for this component</div>
+                    <div class="title">Title waaaaaay to long to fit in one line</div>
                     <div class="description">
-                        <div>Account_Name</div>
-                        <div>00000 Views · 0 Days ago</div>
+                        <div>00000 Views</div>
                     </div>
                 </div>
             </div>
@@ -26,7 +20,7 @@
 
 <script>
 export default {
-    name: 'VideoCardComp',
+    name: 'ShortsCardComp',
     components: { 
     },
     data() {
@@ -44,52 +38,13 @@ export default {
 .card{
     margin-bottom: 10px;
 }
-.card:hover > .card-image{
-    animation-name: card-hover--card-image;
-    animation-duration: 750ms;
-    border-radius: 0;
-}
-.card:hover .timer{
-    opacity: 0%;
-    animation: card-hover--timer;
-    animation-duration: 200ms;
-}
 .card-image{
-    width: 360px;
-    height: 200px;
+    width: 170px;
+    height: 300px;
+    max-width: 170px;
     background-color: #5a5a5a;
     border-radius: 10px;
     cursor: pointer;
-}
-@keyframes card-hover--card-image{
-    from{
-    border-radius: 10px;
-    }
-    to{
-    border-radius: 0;
-    }
-}
-@keyframes card-hover--timer{
-    from{
-    opacity:100%;
-    }
-    to{
-        opacity:0%;
-    }
-}
-.timer{
-    display: flex;
-    position: relative;
-    font-size: 12px;
-    top: 85%;
-    left: 98%;
-    background-color: #000000;
-    padding:1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    transform: translate(-100%,0%);
-    width: min-content;
-    border-radius: 3px;
 }
 .row{
     display: flex;
@@ -100,6 +55,7 @@ export default {
     display: flex;
     flex-direction: row;
     height: 100px;
+    max-width: inherit;
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -110,15 +66,13 @@ export default {
     min-height: 36px;
     background-color: #313131;
     border-radius: 50%;
-    margin-right: 10px;
     margin-top: 5px;
 }
 
 .title{
     font-size: 16px;
     font-weight: bold;
-    max-width: 250px;
-    max-height:60px;
+    max-width: 130px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

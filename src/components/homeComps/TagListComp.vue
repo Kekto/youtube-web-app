@@ -61,6 +61,10 @@ export default {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    justify-content: center;
 }
 .arrow-right{
     margin-left: 15px;
@@ -73,7 +77,7 @@ export default {
     flex-direction: row;
     gap: 15px;
     white-space: nowrap;
-    max-width: 100%;
+    max-width: auto;
     overflow-y: hidden;
 }
 .tag-bar::-webkit-scrollbar{

@@ -1,7 +1,7 @@
 <template>
     <div class="account-bar">
         <div class="icon hover">
-            <img class="icon-image" style="filter:invert(100%);height:16px" src="@/assets/yt_media_create.svg"/>
+            <img class="icon-image" style="filter:invert(100%);height:14px" src="@/assets/yt_media_create.svg"/>
         </div>
         <div class="icon hover">
             <img class="icon-image" style="height:24px" src="@/assets/yt_bell_icon.svg"/>

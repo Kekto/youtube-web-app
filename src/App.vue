@@ -11,7 +11,7 @@
           <navigation-component/>
         </el-aside>
         <el-main class="main">
-          <div style="position: sticky;">
+          <div>
             <router-view/>
           </div>
         </el-main>
@@ -55,7 +55,7 @@ export default {
   background-color: #0f0f0f;
   font-family: Roboto, Arial, sans-serif;
   color: #f1f1f1;
-  height: 100%;
+  height: 100vh;
   overflow-y: hidden;
 
 }
@@ -74,7 +74,6 @@ export default {
 .main{
   position: sticky;
   padding: 0;
-  padding-top: 12px;
 }
 .main::-webkit-scrollbar{
   display: none;

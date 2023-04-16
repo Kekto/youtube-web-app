@@ -6,7 +6,7 @@
             </template>
         </el-input>
         <el-button class="button">
-            <el-icon size="20px" style="opacity:50%"><Search/></el-icon>
+            <el-icon size="20px"><Search/></el-icon>
         </el-button>
         <el-button class="button-round">
             <img class="button-icon" :src="require(`@/assets/yt_mic_icon.svg`)"/>
