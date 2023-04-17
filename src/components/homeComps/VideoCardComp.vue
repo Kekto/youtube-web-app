@@ -113,7 +113,6 @@ export default {
     margin-right: 10px;
     margin-top: 5px;
 }
-
 .title{
     font-size: 16px;
     font-weight: bold;
