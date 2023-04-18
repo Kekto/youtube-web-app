@@ -22,7 +22,7 @@
                     <div class="socials">
                         <img class="icon" src="@/assets/share.svg"/>
                         <div class="comments">
-                            <img class="icon" src="@/assets/comment.svg"/>
+                            <img class="icon-smaller" src="@/assets/comment.svg"/>
                             000
                         </div>
                         <el-icon class="icon rotated"><MoreFilled /></el-icon>
@@ -115,6 +115,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .likes{
     display: flex;
@@ -132,12 +133,19 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
 .icon{
     height: 20px;
     width: 20px;
     min-height: 20px;
     min-width: 20px;
+}
+.icon-smaller{
+    height: 14px;
+    width: 14px;
+    min-height: 14px;
+    min-width: 14px;
 }
 .mirrored{
     transform: rotateY(180deg);

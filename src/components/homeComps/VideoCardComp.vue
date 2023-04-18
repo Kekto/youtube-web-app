@@ -18,10 +18,62 @@
                 </div>
             </div>
             <div class="more-details">
-                <el-icon class="profile-picture rotated"><MoreFilled /></el-icon>
+                <el-icon class="profile-picture rotated" @click="popupToggle = !popupToggle"><MoreFilled /></el-icon>
+            </div>
+        </div>
+        <div v-if="popupToggle" class="card-popup-wrapper">
+            <div class="card-popup">
+                <div class="card-popup-content">
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img style="padding:4px" src="@/assets/queue.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Add to queue</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img class="img inverted" src="@/assets/yt_towatch.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Add to Watch Later</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img src="@/assets/playlist_add.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Add to playlist</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img class="img" src="@/assets/download.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Download</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img class="img" src="@/assets/share.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Share</div>
+                    </div>
+                    <el-divider class="divider"/>
+                    <div class="card-popup-item">
+                        <el-icon size="24px" class="card-popup-item-icon"><CircleClose /></el-icon>
+                        <div class="card-popup-item-text">It doesn't interest me</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <el-icon size="24px" class="card-popup-item-icon"><Remove /></el-icon>
+                        <div class="card-popup-item-text">Don't promote this channel</div>
+                    </div>
+                    <div class="card-popup-item">
+                        <div class="card-popup-item-icon" >
+                            <img class="img" src="@/assets/yt_reportHistory.svg" />
+                        </div>
+                        <div class="card-popup-item-text">Report</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -31,6 +83,7 @@ export default {
     },
     data() {
         return {
+            popupToggle:0
         }
     },
     mounted() {
@@ -138,5 +191,65 @@ export default {
     background: none;
     margin-top: 5px;
 }
-
+.card-popup-wrapper{
+    position: relative;
+}
+.card-popup{
+    position: absolute;
+    display: block;
+    height: auto;
+    width: max-content;
+    background-color: #313131;
+    z-index: 100;
+    top:-60px;
+    border-radius: 8px;
+    left:360px;
+    transform: translate(-100%,0);
+}
+.card-popup-content{
+    padding-top:8px;
+    padding-bottom:8px;
+    display: flex;
+    flex-direction: column;
+}
+.card-popup-item{
+    padding-left: 16px;
+    padding-right: 12px;
+    font-size: 14px;
+    height: 36px;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+.card-popup-item:hover{
+    background-color: #515151;
+}
+.card-popup-item-text{
+    padding-right: 24px;
+}
+.card-popup-item-icon{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    margin-right: 12px;
+}
+.img{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+.divider{
+  border-color: #515151;
+  border-width: 1px;
+  width: auto;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.inverted{
+    filter: invert(100%);
+}
 </style>
