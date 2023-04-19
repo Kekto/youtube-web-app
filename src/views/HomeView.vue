@@ -7,7 +7,7 @@
       <div class="cards">
         <VideoCardComp/>
         <VideoCardComp/>
-        <VideoCardComp/>
+        <VideoCardComp :is-playlist="true"/>
         <VideoCardComp/>
       </div>
       <el-divider class="divider"/>

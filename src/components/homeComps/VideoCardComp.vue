@@ -1,19 +1,36 @@
 <template>
-    <div class="card">
+    <div class="card" :class="{'video' : !isPlaylist, 'playlist' : isPlaylist} ">
         <div class="card-image">
-            <div class="timer">
+            <div v-if="!isPlaylist" class="timer">
                 00:00
             </div>
+            <div v-else class="playlist-bar">
+                <img src="@/assets/yt_live.svg" />
+            </div>
+            <div class="blackout"></div>
+            <div v-if="isPlaylist" class="blackout-text">
+                <img style="height:20px;width: 20px;padding-right: 5px;" src="@/assets/play_icon.svg"/>
+                PLAY ALL
+            </div>
+
         </div>
         <div class="row">
             <div class="details">
-                <div class="profile-picture">
+                <div v-if="!isPlaylist" class="profile-picture">
                 </div>
                 <div>
                     <div class="title">Title waaaaaay to long to fit in two lines that were given for this component</div>
                     <div class="description">
-                        <div>Account_Name</div>
-                        <div>00000 Views · 0 Days ago</div>
+                        <div v-if="!isPlaylist">
+                            <div>Account_Name</div>
+                            <div>00000 Views · 0 Days ago</div>
+                        </div>
+                        <div v-else>
+                            <a>Author</a>
+                            <a>, </a>
+                            <a>Author</a>
+                            <a> and more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,50 +41,54 @@
         <div v-if="popupToggle" class="card-popup-wrapper">
             <div class="card-popup">
                 <div class="card-popup-content">
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img style="padding:4px" src="@/assets/queue.svg" />
+                    <div v-if="!isPlaylist">
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img style="padding:4px" src="@/assets/queue.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Add to queue</div>
                         </div>
-                        <div class="card-popup-item-text">Add to queue</div>
-                    </div>
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img class="img inverted" src="@/assets/yt_towatch.svg" />
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img class="img inverted" src="@/assets/yt_towatch.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Add to Watch Later</div>
                         </div>
-                        <div class="card-popup-item-text">Add to Watch Later</div>
-                    </div>
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img src="@/assets/playlist_add.svg" />
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img src="@/assets/playlist_add.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Add to playlist</div>
                         </div>
-                        <div class="card-popup-item-text">Add to playlist</div>
-                    </div>
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img class="img" src="@/assets/download.svg" />
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img class="img" src="@/assets/download.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Download</div>
                         </div>
-                        <div class="card-popup-item-text">Download</div>
-                    </div>
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img class="img" src="@/assets/share.svg" />
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img class="img" src="@/assets/share.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Share</div>
                         </div>
-                        <div class="card-popup-item-text">Share</div>
+                        <el-divider class="divider"/>
                     </div>
-                    <el-divider class="divider"/>
                     <div class="card-popup-item">
                         <el-icon size="24px" class="card-popup-item-icon"><CircleClose /></el-icon>
                         <div class="card-popup-item-text">It doesn't interest me</div>
                     </div>
-                    <div class="card-popup-item">
-                        <el-icon size="24px" class="card-popup-item-icon"><Remove /></el-icon>
-                        <div class="card-popup-item-text">Don't promote this channel</div>
-                    </div>
-                    <div class="card-popup-item">
-                        <div class="card-popup-item-icon" >
-                            <img class="img" src="@/assets/yt_reportHistory.svg" />
+                    <div v-if="!isPlaylist">
+                        <div class="card-popup-item">
+                            <el-icon size="24px" class="card-popup-item-icon"><Remove /></el-icon>
+                            <div class="card-popup-item-text">Don't promote this channel</div>
                         </div>
-                        <div class="card-popup-item-text">Report</div>
+                        <div class="card-popup-item">
+                            <div class="card-popup-item-icon" >
+                                <img class="img" src="@/assets/yt_reportHistory.svg" />
+                            </div>
+                            <div class="card-popup-item-text">Report</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,6 +101,12 @@
 export default {
     name: 'VideoCardComp',
     components: { 
+    },
+    props:{
+        isPlaylist: {
+            type:Boolean,
+            default:false
+        },
     },
     data() {
         return {
@@ -97,12 +124,38 @@ export default {
 .card{
     margin-bottom: 10px;
 }
-.card:hover > .card-image{
+.playlist .blackout{
+    opacity: 0%;
+}
+.playlist .blackout-text{
+    display: none;
+}
+.playlist:hover .blackout-text{
+    display: flex;
+}
+.blackout-text{
+    position: relative;
+    z-index: 2;
+    top: calc(-50% - 24px);
+    justify-content: center;
+    transform: translate(0%,-50%);
+    font-weight: bold;
+    font-size: 12px;
+}
+.playlist:hover .blackout{
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    position: relative;
+    top: -24px;
+    background-color: #000000;
+}
+.video:hover > .card-image{
     animation-name: card-hover--card-image;
     animation-duration: 750ms;
     border-radius: 0;
 }
-.card:hover .timer{
+.video:hover .timer{
     opacity: 0%;
     animation: card-hover--timer;
     animation-duration: 200ms;
@@ -144,6 +197,17 @@ export default {
     width: min-content;
     border-radius: 3px;
 }
+.playlist-bar{
+    height: 24px;
+    width: auto;
+    background-color: #000000;
+    opacity: 30%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 100%;
+    transform: translate(0%,-100%);
+}
 .row{
     display: flex;
     justify-content: space-between;
@@ -155,6 +219,7 @@ export default {
     height: 100px;
     padding-top: 10px;
     padding-left: 10px;
+    max-width: 310px;
 }
 .profile-picture{
     width: 36px;
@@ -169,7 +234,7 @@ export default {
 .title{
     font-size: 16px;
     font-weight: bold;
-    max-width: 250px;
+    max-width: inherit;
     max-height:60px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
