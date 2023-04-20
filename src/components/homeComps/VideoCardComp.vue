@@ -12,7 +12,6 @@
                 <img style="height:20px;width: 20px;padding-right: 5px;" src="@/assets/play_icon.svg"/>
                 PLAY ALL
             </div>
-
         </div>
         <div class="row">
             <div class="details">
@@ -94,7 +93,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>

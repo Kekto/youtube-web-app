@@ -15,9 +15,9 @@
                 </div>
                 <div class="footer">
                     <div class="likes">
-                        <img class="icon" src="@/assets/thumbs_up.svg"/>
+                        <img class="icon cursor-pointer" src="@/assets/thumbs_up.svg" @click="this.like()"/>
                         000
-                        <img class="icon mirrored" src="@/assets/thumbs_down.svg"/>
+                        <img class="icon mirrored cursor-pointer" src="@/assets/thumbs_down.svg" @click="this.dislike()"/>
                     </div>
                     <div class="socials">
                         <img class="icon" src="@/assets/share.svg"/>
@@ -40,11 +40,21 @@ export default {
     },
     data() {
         return {
+            liked: false,
+            disliked:false,
         }
     },
     mounted() {
     },
     methods:{
+        like(){
+            this.liked = !this.liked;
+            this.disliked = false;
+        },
+        dislike(){
+            this.disliked = !this.disliked;
+            this.liked = false;
+        }
     },
     }
 </script>
@@ -127,11 +137,14 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    height: inherit;
+    align-items: center;
     font-size: 14px;
 }
 .comments{
     display: flex;
     flex-direction: row;
+    height: inherit;
     gap: 10px;
     align-items: center;
 }
@@ -140,6 +153,7 @@ export default {
     width: 20px;
     min-height: 20px;
     min-width: 20px;
+    
 }
 .icon-smaller{
     height: 14px;
