@@ -9,10 +9,10 @@
                     <div class="link">Manage Google account</div>
                 </div>
             </div>
-            <el-divider class="divider"/>
+            <el-divider class="divider-margin"/>
             <div class="notif-item-wrapper">
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/your_channel.svg" />
                     <div class="card-popup-item-text">Your channel</div>
                 </div>
                 <div class="card-popup-item">
@@ -24,51 +24,51 @@
                     <div class="card-popup-item-text">Change account</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/logout.svg" />
                     <div class="card-popup-item-text">Log out</div>
                 </div>
                 <el-divider class="divider-margin"/>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/purchases.svg" />
                     <div class="card-popup-item-text">Purchases and subscriptions</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/data_protection.svg" />
                     <div class="card-popup-item-text">Your data</div>
                 </div>
                 <el-divider class="divider-margin"/>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/dark_mode.svg" />
                     <div class="card-popup-item-text">Motive: dark</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/langauge.svg" />
                     <div class="card-popup-item-text">Language: English</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/acess_protection.svg" />
                     <div class="card-popup-item-text">Protection mode: off</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/global.svg" />
                     <div class="card-popup-item-text">Location: Unknown</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/yt_keyboard_icon.svg" />
                     <div class="card-popup-item-text">Key shortcuts</div>
                 </div>
                 <el-divider class="divider-margin"/>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/yt_settings.svg" />
                     <div class="card-popup-item-text">Settings</div>
                 </div>
                 <el-divider class="divider-margin"/>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/yt_help.svg" />
                     <div class="card-popup-item-text">Help</div>
                 </div>
                 <div class="card-popup-item">
-                    <img class="img" src="@/assets/yt_live.svg" />
+                    <img class="img" src="@/assets/yt_feedback.svg" />
                     <div class="card-popup-item-text">Send ticket</div>
                 </div>
             </div>
@@ -104,7 +104,8 @@ export default {
 .account-header{
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 12px;
+    padding-top: 16px;
 }
 .account-header-image{
     height: 40px;
@@ -113,6 +114,7 @@ export default {
     max-width: 40px;
     background-color: #AAAAAA;
     border-radius: 50%;
+    margin-right: 4px;
 }
 .account-header-text{
     display: flex;
@@ -140,20 +142,13 @@ export default {
     padding-right: 24px;
 }
 .img{
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2px;
     margin-right: 12px;
-}
-.divider{
-  border-color: #515151;
-  border-width: 1px;
-  width: auto;
-  margin-top:0px;
-  margin-bottom:0px;
 }
 .divider-margin{
   border-color: #515151;
