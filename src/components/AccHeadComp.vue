@@ -10,9 +10,15 @@
             </div>
         </div>
         <div>
-            <div class="icon hovered" @click="this.popupNotifToggle = !popupNotifToggle">
+            <div class="icon hovered" @click="this.popupNotifToggle = !popupNotifToggle; this.unread = 0">
                 <img class="icon-image" style="height:24px" src="@/assets/yt_bell_icon.svg"/>
             </div>
+            <div class="badge-wrapper">
+                <div v-if="unread > 0" class="icon-badge">
+                    {{  this.formatBadge }}
+                </div>
+            </div>
+
             <!-- NOTIFICATION POPUP -->
             <div v-if="popupNotifToggle" class="card-popup-wrapper">
                 <NotificationPopupComp/>
@@ -46,9 +52,18 @@ export default {
             popupCreateToggle: false,
             popupNotifToggle: false,
             popupAccountToggle: false,
+            unread: 55,
         }
     },
+    computed:{
+        formatBadge(){
+            if(this.unread>9){
+                return "9+"
+            }
+            return this.unread
+        }
     }
+}
 </script>
 
 <style scoped>
@@ -73,6 +88,23 @@ export default {
 .icon-image{
     width: 28px;
     height: 28px;
+}
+.badge-wrapper{
+    position: relative;
+}
+.icon-badge{
+    display: flex;
+    position: absolute;
+    color: white;
+    background-color: red;
+    left: 30px;
+    top: -45px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
 }
 .hovered:hover{
     border-radius: 50%;
